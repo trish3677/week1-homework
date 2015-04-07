@@ -19,7 +19,11 @@ data = JSON.parse(json_data)
 # TO DO:
 # Replace the following 0 with an expression
 # that will extract the temperature
-temp = 0
+
+#puts data.count
+#puts data["main"].count
+temp = data["main"]["temp"]
+
 
 # Output the temperature to the screen
 puts "It is currently #{temp.round(0)}\u00B0 outside."
