@@ -1,3 +1,4 @@
+#Patricia Corvino
 # Require Ruby libraries
 require 'open-uri'
 require 'json'
@@ -19,9 +20,6 @@ data = JSON.parse(json_data)
 # TO DO:
 # Replace the following 0 with an expression
 # that will extract the temperature
-
-#puts data.count
-#puts data["main"].count
 temp = data["main"]["temp"]
 
 

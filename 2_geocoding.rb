@@ -1,3 +1,4 @@
+#Patricia Corvino
 # Activate some helpful built-in Ruby libraries
 require 'open-uri'
 require 'json'
@@ -18,14 +19,11 @@ json_data = open("http://maps.googleapis.com/maps/api/geocode/json?address=#{loc
 # TO DO:
 # Replace the following 0's with expressions
 # that will extract the latitude and longitude
-
-puts data.count
-puts data["results"].first["geometry"]["location"]["lat"]
-#latitude = data["results"]["geometry"]["location"]["lat"]
-#longitude = data[0]["geometry"]["location"]["lng"]
+latitude = data["results"].first["geometry"]["location"]["lat"]
+longitude = data["results"].first["geometry"]["location"]["lng"]
 
 # Output latitude and longitude to the screen
-#puts "Latitude: #{latitude}"
-#puts "Longitude: #{longitude}"
+puts "Latitude: #{latitude}"
+puts "Longitude: #{longitude}"
 
 

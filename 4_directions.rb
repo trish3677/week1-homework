@@ -1,3 +1,4 @@
+#Patricia Corvino
 # Require Ruby libraries
 require 'open-uri'
 require 'json'
@@ -21,16 +22,14 @@ data = JSON.parse(json_data)
 
 # 1. TO DO:
 # Replace the following 0 with an expression that will retrieve the total travel time
-puts data.count
-puts data["routes"].count
-total_time = 0
+total_time = data["routes"].first["legs"].first["duration"]["text"]
 
 # Output the total drive time to the screen
-#puts "Total travel time driving: #{total_time}"
+puts "Total travel time driving: #{total_time}"
 
 # 2. TO DO:
 # Replace the following 0 with an expression that will retrieve the total distance
-#total_distance = 0
+total_distance = data["routes"].first["legs"].first["distance"]["text"]
 
 # Output the total distance to the screen
-#puts "Total distance traveled: #{total_distance}"
+puts "Total distance traveled: #{total_distance}"
